@@ -4,7 +4,7 @@
   "description": "chatapp",
   "main": "server.js",
   "scripts": {
-    "start": "node .",
+    "start": "node . --omit=dev",
     "dev": "nodemon ."
   },
   "author": "Edward",
