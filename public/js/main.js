@@ -114,3 +114,7 @@ socket.on('stopTyping', () => {
   typingIndicator.classList.remove('animating'); // Remove animation class
 });
 
+socket.on('error', (errorMessage) => {
+  alert(errorMessage); // Вывод сообщения об ошибке на экран
+  location.reload(); // Перезагрузка страницы
+});

@@ -12,13 +12,15 @@
 		/>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="icon" type="image/png" href="img/favicon.png">
 		<title>FILMSTRIP - Chat for Film Lovers</title>
 	</head>
 	<body>
 		<section class="linear-glow">
 			<div class="join-container">
 				<header class="join-header">
-					<h1>FILMSTRIP</h1>
+					<h1><img src="img/Group 14.png" alt="Logo"/> FILMSTRIP</h1>
+					
 				</header>
 				<main class="join-main">
 					<form action="chat.html">
@@ -28,20 +30,22 @@
 								type="text"
 								name="username"
 								id="username"
-								maxlength="10"
 								placeholder="Enter username..."
+								maxlength="10"
 								required
+								autocomplete="off"
 							/>
 						</div>
 						<div class="form-control">
 							<label for="room">Room</label>
 							<select name="room" id="room">
-								<option value="JavaScript">JavaScript</option>
-								<option value="Python">Python</option>
-								<option value="PHP">PHP</option>
-								<option value="C#">C#</option>
-								<option value="Ruby">Ruby</option>
-								<option value="Java">Java</option>
+								<option value="FilmNews">FilmNews</option>
+								<option value="RecentReleases">RecentReleases</option>
+								<option value="Rumours">Rumours</option>
+								<option value="Retrospective">Retrospective</option>
+								<option value="Serials">Serials</option>
+								<option value="Films">Films</option>
+								<option value="Cartoons">Cartoons</option>
 							</select>
 						<button type="submit" class="btn">Join Chat</button>
 					</form>
