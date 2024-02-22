@@ -1,5 +1,5 @@
 {
-  "name": "chat",
+  "name": "filmstrip",
   "version": "1.0.0",
   "description": "chatapp",
   "main": "server.js",
@@ -15,6 +15,10 @@
     "socket.io": "^4.7.4"
   },
   "devDependencies": {
-    "nodemon": "^3.0.3"
+    "nodemon": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "web-application"
   }
 }
