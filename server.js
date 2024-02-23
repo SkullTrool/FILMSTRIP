@@ -27,7 +27,15 @@ io.on('connection', socket => {
 
       socket.join(user.room)
 
-      socket.emit('message', formatMessage(ADMIN, "Welcome to ChatApp!" )) // Welcome for user
+      io.to("FilmNews").emit('message', formatMessage(ADMIN, "Welcome to FilmNews - this chat room is designed to discuss the latest film industry news!" ));
+      io.to("RecentReleases").emit('message', formatMessage(ADMIN, "Welcome to RecentReleases - this chat room is for discussing the latest cinema releases!" ));
+      io.to("Rumours").emit('message', formatMessage(ADMIN, "Welcome to Rumours - this chat room is for discussing rumours in the film world!" ));
+      io.to("Retrospective").emit('message', formatMessage(ADMIN, "Welcome to Retrospective - This chat is created to discuss old iconic franchises and in general, a look into the past of the film world!" ));
+      io.to("Serials").emit('message', formatMessage(ADMIN, "Welcome to Serials - This chat is created to discuss TV series!" ));
+      io.to("Films").emit('message', formatMessage(ADMIN, "Welcome to Films - this chat is created to discuss films!" ));
+      io.to("Cartoons").emit('message', formatMessage(ADMIN, "Welcome to Cartoons - this chat room is for discussing cartoons!" ));
+
+      socket.emit('message', formatMessage(ADMIN, "Please observe the following rules when communicating in chat: be polite and respect other participants, avoid foul language and insults, support the topic of conversation, do not spread false information, respect privacy and do not share personal data, avoid spam. Thank you for your understanding and respect for the rules of the chat!" )) // Welcome for user
 
       socket.broadcast.to(user.room).emit('message', formatMessage(ADMIN, `${user.username} has joined the room`)); // User connects for all people
 
